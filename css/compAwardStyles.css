@@ -55,9 +55,14 @@ body {
 	color: white;
 }
 
+#tableHeader th {
+	height: 35px;
+}
+
 #table td {
 	vertical-align: middle;
 	text-align: center;
+	height: 25px;
 }
 
 .masterFooter {
