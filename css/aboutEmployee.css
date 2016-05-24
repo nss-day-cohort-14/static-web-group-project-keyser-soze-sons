@@ -1,0 +1,73 @@
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+header {
+	background-color: darkgrey;
+}
+
+article {
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+}
+
+footer {
+	height: 10rem;
+	background-color: grey;
+}
+
+h1, h2, p {
+	font-family: 'Lato', sans-serif;
+	color: #E74C3C;
+}
+
+h2 {
+	margin: 1rem 1rem;
+}
+
+.compHist--content {
+	margin: 1rem 1rem;
+}
+
+.employeeList {
+	display: flex;
+	flex-direction: column;
+}
+
+.empRow {
+	display: flex;
+	flex-direction: column;
+	padding: 0.5rem 0;
+}
+
+.employee {
+	border: 1px solid black;
+	margin: 0.5rem auto;
+	padding: 0.5rem;
+	width: 90%;
+}
+
+.headShot {
+	height: 6rem;
+	float: left;
+	margin: 0 0.5rem 0.5rem 0;
+}
+
+.empBio {
+	margin: 0;
+	padding: 0;
+}
+
+@media only screen and (min-width: 450px) {
+    .empRow {
+		flex-direction: row;
+    }
+
+    .employee {
+    	width: 46%;
+    }
+}
+
