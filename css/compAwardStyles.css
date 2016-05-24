@@ -1,5 +1,9 @@
 /*--- heading text color: #E74C3C; --*/
+/*Colorz:
 
+[3:33] 
+heading text color: #E74C3C ;
+------       links color: #8e44ad ;*/
 
 
 body {
@@ -20,6 +24,7 @@ body {
 
 .awardInfoBar {
 	border: 2px solid;
+	height: 50px;
 }
 
 .awardInfoBar ul {	
@@ -74,6 +79,7 @@ body {
 
 .footerHeading {
 	margin: 0 auto;
+	margin-bottom: -25px;
 }
 
 .footerInfo {
