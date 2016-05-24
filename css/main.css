@@ -1,4 +1,4 @@
-/*--- heading text color: #E74C3C;
+/*--- heading text color: #E74C3C; --*/
 
 
 
@@ -7,4 +7,70 @@ body {
 	font-family: 'Lato', Verdana, sans-serif;
 	padding: 0;
 	margin: 0;
+}
+.mainBodyWrap {
+	width: 95%;
+	margin: 0 auto;
+}
+.bodyWrap {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+.awardInfoBar {
+	border: 2px solid;
+}
+
+.awardInfoBar ul {	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding-left: 0;
+}
+.awardInfoBar li {
+	list-style: none;
+	display: inline;
+}
+
+.awardImages {
+	width: 30%;
+}
+
+.awardImages img {
+	height: 50%;
+	width: 50%;
+}
+
+.awardInfoBody {
+	width: 70%;
+}
+
+.awardInfoBody table {
+	width: 100%;
+}
+
+#tableHeader {
+	background: blue;
+	color: white;
+}
+
+#table td {
+	vertical-align: middle;
+	text-align: center;
+}
+
+.masterFooter {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column wrap;
+}
+
+.footerHeading {
+	margin: 0 auto;
+}
+
+.footerInfo {
+	margin: 0 auto;
 }
