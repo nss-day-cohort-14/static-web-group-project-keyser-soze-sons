@@ -1,4 +1,6 @@
 // variables for products.js
+		// empty array for products
+		// empty div to populate webpage with products
 var products = [],
     productArticleDiv = document.getElementById('productArticles');
 
@@ -19,33 +21,8 @@ var productFactory = function(name, brand, description, cordType, bagType, price
 	return product;
 };
 
-// function to build up a new product card via data from array of objects
 
-function buildCard(productObject) {
-	var htmlString = '';
-
-	htmlString += '<article class="productCard">';
-
-	htmlString += '<section class="productHeader">';
-	htmlString += '<h2>' + productObject.name + '<br>' + productObject.brand + '</h2>';
-	htmlString += '</section>';
-
-	htmlString += '<section class="productImg">';
-	htmlString += '<img src=../images/' + productObject.fileName + '/>';
-	htmlString += '</section>';
-
-	htmlString += '<section class="productInfo">';
-	htmlString += '<p>' + productObject.price + ' ' + '<span class="rating">' + productObject.rating + '</span></p>';
-	htmlString += '<p>' + productObject.description + '</p>';
-	htmlString += '</section>';
-
-	htmlString += '</article>';
-
-  return htmlString;
-};
-
-
-// populate array with objects for sale
+// populate array with objects (which we build up with the productFactory function) for sale
 
 products.push(productFactory('Henry Extra', 
 							 'Numatic',
@@ -70,7 +47,7 @@ products.push(productFactory('Airspeed Unlimited',
 							 'bagless',
 							 '$99.99',
 							 4,
-							 'eureka.jpg'));
+							 'eureka.jpeg'));
 products.push(productFactory('Glutton',
 							 'Glutton',
 							 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit eligendi cumque optio dolore corporis error recusandae minus delectus sapiente neque?',
@@ -111,6 +88,36 @@ products.push(productFactory('Electorlux',
 							 '$225.94',
 							 4,
 							 'electrolux.jpg'));
+
+
+
+// function to build up a new product card via data from array of objects
+
+function buildCard(productObject) {
+	var htmlString = '';
+
+	htmlString += '<article class="productCard">';
+
+	htmlString += '<section class="productHeader">';
+	htmlString += '<h2>' + productObject.name + '<br>' + productObject.brand + '</h2>';
+	htmlString += '</section>';
+
+	htmlString += '<section class="productImg">';
+	htmlString += '<img src=../images/' + productObject.fileName + '/>';
+	htmlString += '</section>';
+
+	htmlString += '<section class="productInfo">';
+	htmlString += '<p>' + productObject.price + ' ' + '<span class="rating">' + productObject.rating + '</span></p>';
+	htmlString += '<p>' + productObject.description + '</p>';
+	htmlString += '</section>';
+
+	htmlString += '</article>';
+
+  return htmlString;
+};
+
+
+
 
 // loop to populate the page with our products
 
