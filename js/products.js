@@ -1,12 +1,54 @@
 // variables for products.js
 var products = [],
 // grab all ncessary DOM elements for building a product card
-		productCard = document.getElementById("productCard"),
-		productHeader = document.getElementById("productHeader"),
-		productImage = document.getElementById("productImage"),
-		productInfo = document.getElementById("productInfo"),
-		productSpecSection = document.getElementById("productSpec"),
-		productPriceSection = document.getElementById("productPrice");
+		productCard = document.getElementById("productCard"), // grabs <article> element
+		productHeader = document.getElementById("productHeader"), // grabs <header> element
+		productImage = document.getElementById("productImage"), // grabs <div> element
+		productInfo = document.getElementById("productInfo"), // grabs <div> element
+		productSpecSection = document.getElementById("productSpec"), // grabs <section> element
+		productPriceSection = document.getElementById("productPrice"); // grabs <section> elements
+
+var productArticleDiv = document.getElementById('productArticles');
+
+
+// var productCardBuilder = function buildCard (productObject) {
+// 	var newProductCard = productCard;
+
+// 		productHeader.innerHTML = '<h2>' + productObject.name + ' ' + productObject.brand + '</h2>';
+// 		newProductCard += productHeader;
+
+// 		productImage.innerHTML = '<img src=../images/' + productObject.fileName + '/>';
+// 		newProductCard += productImage;
+
+// 		productInfo.innerHTML = '<p>' + productObject.price + ' ' + '<span class="rating">' + productObject.rating + '</span>' + '</p>';
+// 		productInfo.innerHTML += '<p>' + productObject.description + '</p>';
+// 		newProductCard += productInfo;
+
+//   return newProductCard;
+// };
+
+function buildCard(productObject) {
+	var htmlString = '';
+
+	htmlString += '<article class="productCard">';
+
+	htmlString += '<section class="productHeader">';
+	htmlString += '<h2>' + productObject.name + '<br>' + productObject.brand + '</h2>';
+	htmlString += '</section>';
+
+	htmlString += '<section class="productImg">';
+	htmlString += '<img src=../images/' + productObject.fileName + '/>';
+	htmlString += '</section>';
+
+	htmlString += '<section class="productInfo">';
+	htmlString += '<p>' + productObject.price + ' ' + '<span class="rating">' + productObject.rating + '</span></p>';
+	htmlString += '<p>' + productObject.description + '</p>';
+	htmlString += '</section>';
+
+	htmlString += '</article>';
+
+  return htmlString;
+};
 
 
 var productFactory = function(name, brand, description, cordType, bagType, price, rating, fileName) {
@@ -31,7 +73,7 @@ products.push(productFactory('Henry Extra',
 							 'bagless',
 							 '$439.95',
 							 4.7,
-							 'henry_vacumm.kpg'));
+							 'henry_vacuum.jpg'));
 products.push(productFactory('Roomba 650',
 							 'iRobot',
 							 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, dolores? Numquam perferendis sequi distinctio quaerat, voluptas delectus minus quidem accusantium.',
@@ -89,4 +131,9 @@ products.push(productFactory('Electorlux',
 							 4,
 							 'electrolux.jpg'));
 
-console.log(products);
+
+for (var i = 0; i < products.length; i++) {
+	productArticleDiv.innerHTML += buildCard(products[i]);
+}
+
+// console.log(products);
