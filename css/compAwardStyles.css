@@ -1,0 +1,236 @@
+/*--- heading text color: #E74C3C; --*/
+/*Colorz:
+
+[3:33] 
+heading text color: #E74C3C ;
+------       links color: #8e44ad ;*/
+
+
+body {
+	box-sizing: border-box;
+	font-family: 'Lato', Verdana, sans-serif;
+	padding: 0;
+	margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #E74C3C;
+}
+
+.allContentWrap {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.bodyWrap {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 5%;
+}
+
+.awardInfoBar {
+	border-top: 1px solid rgba(76, 76, 76, .5);
+	border-bottom: 1px solid rgba(76, 76, 76, .5);
+	background: linear-gradient(to bottom, rgba(214,214,214,1) 0%,rgba(255,255,255,1) 10%,rgba(255,255,255,1) 89%,rgba(214,214,214,1) 100%);
+}
+
+.awardInfoBar ul {	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	padding-left: 0;
+}
+.awardInfoBar li {
+	list-style: none;
+	display: inline;
+}
+
+#service::before {
+	content: url('../images/24hr.png');
+}
+
+#innovation::before {
+	content: url('../images/inno.png');
+}
+
+#cleanliness::before {
+	content: url('../images/vac.png');
+}
+
+.awardImagesSection {
+	width: 25%;
+	padding: 2%;
+	border: 5px solid #8e44ad;
+	background: #8e2c21;
+	border-radius: 1%;
+}
+
+.awardImagesAside {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.awardImagesAside img {
+	height: 20%;
+	width: 20%;
+	padding: 5%;
+}
+
+.awardInfoBody {
+	width: 70%;
+}
+
+#table {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#tableHeader {
+	background: #8e44ad;
+}
+
+#tableHeader th {
+	color: #E74C3C;
+}
+
+#tableBody {
+	background-color: rgba(190, 190, 190, 1.0);
+}
+
+#tableBody td {
+	padding: 5px;
+	vertical-align: middle;
+	text-align: center;
+	height: 25px;
+	border-top: 2px solid rgba(76, 76, 76, .5);
+}
+
+#trService::before {
+	content: url('../images/24hr.png');
+}
+
+#trInnovation::before {
+	content: url('../images/inno.png');
+}
+
+#trCleanliness::before {
+	content: url('../images/vac.png');
+}
+
+
+.masterFooter {
+	width: 95%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column wrap;
+	border-top: 5px solid #8e44ad;
+	background: #8e2c21;
+	margin-top: 5%;
+}
+
+.footerHeading {
+	margin: 0 auto;
+	margin-bottom: -25px;
+}
+
+.footerInfo {
+	margin: 0 auto;
+	color: white;
+}
+
+
+
+
+/***********************************************************
+
+
+Styles for product card
+below this block
+
+
+************************************************************/
+
+
+.productCard {
+	border: 1px solid lightblue;
+	width: 30%;
+	float: left;
+	margin: 5px;
+}
+
+.productTitle, .productInfo p {
+	font-size: .8em;
+}
+
+.productSpec p, .productPrice p, .productSpec footer p:last-of-type {
+	font-size: .7em;
+}
+
+.productCard {
+	border: 1px solid lightblue;
+	width: 30%;
+	float: left;
+	margin: 5px;
+}
+
+.productTitle {
+	border: 1px dotted lightgrey;
+	text-align: center;
+}
+
+.productImage {
+	display: block;
+	vertical-align: center;
+}
+
+.productImage img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.productInfo p {
+	font-weight: 600;
+	margin: 5px;
+	text-align: justify;
+
+}
+
+.productInfo p:last-of-type {
+	background: darkgrey;
+	color: yellow;
+	margin: 0;
+	margin-top: 2px;
+	font-weight: 400;
+}
+
+.productSpec h2 {
+	margin: 20px 0 0 10px;
+}
+
+.productSpec p {
+	font-weight: 600;
+	margin: 2px 0 0 15px;
+}
+
+.productSpec footer p:last-of-type {
+	margin: 2px 0;
+	font-weight: 300;
+}
+
+.productPrice h2 {
+	margin-left: 5px;
+	margin: 2px 0 0 10px;
+}
+
+.productPrice p {
+	font-weight: 600;
+	margin: 2px 0 0 15px;
+}
+
+

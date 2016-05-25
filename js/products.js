@@ -1,4 +1,13 @@
-var products = [];
+// variables for products.js
+var products = [],
+// grab all ncessary DOM elements for building a product card
+		productCard = document.getElementById("productCard"),
+		productHeader = document.getElementById("productHeader"),
+		productImage = document.getElementById("productImage"),
+		productInfo = document.getElementById("productInfo"),
+		productSpecSection = document.getElementById("productSpec"),
+		productPriceSection = document.getElementById("productPrice");
+
 
 var productFactory = function(name, brand, description, cordType, bagType, price, rating, fileName) {
 
