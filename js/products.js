@@ -1,31 +1,25 @@
 // variables for products.js
 var products = [],
-// grab all ncessary DOM elements for building a product card
-		productCard = document.getElementById("productCard"), // grabs <article> element
-		productHeader = document.getElementById("productHeader"), // grabs <header> element
-		productImage = document.getElementById("productImage"), // grabs <div> element
-		productInfo = document.getElementById("productInfo"), // grabs <div> element
-		productSpecSection = document.getElementById("productSpec"), // grabs <section> element
-		productPriceSection = document.getElementById("productPrice"); // grabs <section> elements
+    productArticleDiv = document.getElementById('productArticles');
 
-var productArticleDiv = document.getElementById('productArticles');
+// function to build up a product object via provided information
 
+var productFactory = function(name, brand, description, cordType, bagType, price, rating, fileName) {
 
-// var productCardBuilder = function buildCard (productObject) {
-// 	var newProductCard = productCard;
+	var product = {};
+	product.name = name;
+	product.brand = brand;
+	product.description = description;
+	product.cordType = cordType;
+	product.bagType = bagType;
+	product.price = price;
+	product.rating= rating;
+	product.fileName = fileName;
 
-// 		productHeader.innerHTML = '<h2>' + productObject.name + ' ' + productObject.brand + '</h2>';
-// 		newProductCard += productHeader;
+	return product;
+};
 
-// 		productImage.innerHTML = '<img src=../images/' + productObject.fileName + '/>';
-// 		newProductCard += productImage;
-
-// 		productInfo.innerHTML = '<p>' + productObject.price + ' ' + '<span class="rating">' + productObject.rating + '</span>' + '</p>';
-// 		productInfo.innerHTML += '<p>' + productObject.description + '</p>';
-// 		newProductCard += productInfo;
-
-//   return newProductCard;
-// };
+// function to build up a new product card via data from array of objects
 
 function buildCard(productObject) {
 	var htmlString = '';
@@ -51,20 +45,7 @@ function buildCard(productObject) {
 };
 
 
-var productFactory = function(name, brand, description, cordType, bagType, price, rating, fileName) {
-
-	var product = {};
-	product.name = name;
-	product.brand = brand;
-	product.description = description;
-	product.cordType = cordType;
-	product.bagType = bagType;
-	product.price = price;
-	product.rating= rating;
-	product.fileName = fileName;
-
-	return product;
-};
+// populate array with objects for sale
 
 products.push(productFactory('Henry Extra', 
 							 'Numatic',
@@ -131,9 +112,8 @@ products.push(productFactory('Electorlux',
 							 4,
 							 'electrolux.jpg'));
 
+// loop to populate the page with our products
 
 for (var i = 0; i < products.length; i++) {
 	productArticleDiv.innerHTML += buildCard(products[i]);
 }
-
-// console.log(products);
