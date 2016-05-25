@@ -50,8 +50,16 @@ h6 {
 	display: inline;
 }
 
-#innovation:before {
-	content: url('images/inno.png');
+#service::before {
+	content: url('../images/24hr.png');
+}
+
+#innovation::before {
+	content: url('../images/inno.png');
+}
+
+#cleanliness::before {
+	content: url('../images/vac.png');
 }
 
 .awardImagesSection {
@@ -101,6 +109,18 @@ h6 {
 	text-align: center;
 	height: 25px;
 	border-top: 2px solid rgba(76, 76, 76, .5);
+}
+
+#trService::before {
+	content: url('../images/24hr.png');
+}
+
+#trInnovation::before {
+	content: url('../images/inno.png');
+}
+
+#trCleanliness::before {
+	content: url('../images/vac.png');
 }
 
 
