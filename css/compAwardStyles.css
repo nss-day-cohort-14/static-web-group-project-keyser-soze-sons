@@ -12,10 +12,21 @@ body {
 	padding: 0;
 	margin: 0;
 }
-.mainBodyWrap {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #E74C3C;
+}
+
+.allContentWrap {
 	width: 95%;
 	margin: 0 auto;
 }
+
 .bodyWrap {
 	display: flex;
 	justify-content: space-around;
@@ -23,8 +34,9 @@ body {
 }
 
 .awardInfoBar {
-	border: 2px solid;
-	height: 50px;
+	border-top: 2px solid rgba(76, 76, 76, .5);
+	border-bottom: 2px solid rgba(76, 76, 76, .5);
+	background: linear-gradient(to bottom, rgba(214,214,214,1) 0%,rgba(255,255,255,1) 10%,rgba(255,255,255,1) 89%,rgba(214,214,214,1) 100%);
 }
 
 .awardInfoBar ul {	
@@ -38,43 +50,68 @@ body {
 	display: inline;
 }
 
-.awardImages {
-	width: 30%;
+#innovation:before {
+	content: url('images/inno.png');
 }
 
-.awardImages img {
-	height: 50%;
-	width: 50%;
+.awardImagesSection {
+	width: 25%;
+	padding: 2%;
+	border: 5px solid #8e44ad;
+	background: #8e2c21;
+	border-radius: 1%;
+}
+
+.awardImagesAside {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.awardImagesAside img {
+	height: 20%;
+	width: 20%;
+	padding: 5%;
 }
 
 .awardInfoBody {
 	width: 70%;
 }
 
-.awardInfoBody table {
-	width: 100%;
+#table {
+	width: 90%;
+	margin: 0 auto;
 }
 
 #tableHeader {
-	background: blue;
-	color: white;
+	background: #8e44ad;
 }
 
 #tableHeader th {
-	height: 35px;
+	color: #E74C3C;
 }
 
-#table td {
+#tableBody {
+	background-color: rgba(190, 190, 190, 1.0);
+}
+
+#tableBody td {
+	padding: 5px;
 	vertical-align: middle;
 	text-align: center;
 	height: 25px;
+	border-top: 2px solid rgba(76, 76, 76, .5);
 }
+
 
 .masterFooter {
 	width: 95%;
 	margin: 0 auto;
 	display: flex;
 	flex-flow: column wrap;
+	border-top: 5px solid #8e44ad;
+	background: #8e2c21;
+	margin-top: 5%;
 }
 
 .footerHeading {
@@ -84,4 +121,5 @@ body {
 
 .footerInfo {
 	margin: 0 auto;
+	color: white;
 }
